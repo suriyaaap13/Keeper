@@ -22,6 +22,17 @@ const notes = [
     title: "Hardware vs. Software",
     content:
       "What's the difference between hardware and software? You can hit your hardware with a hammer, but you can only curse at your software."
+  },
+  {
+    key: 5,
+    title: "Algorithm",
+    content:
+      "Algorithm is the word that programmers use when.. they don't want to explain what they did."
+  },
+  {
+    key: 6,
+    title: "Programmers Advice to Putin",
+    content: "Declare variables not war"
   }
 ];
 export default notes;

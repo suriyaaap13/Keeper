@@ -4,15 +4,13 @@ import Footer from "./Footer";
 import Notes from "./Notes";
 import notes from "../notes";
 
-function createCard(card) {
-  return <Notes title={card.title} content={card.content} />;
-}
-
 function App() {
   return (
     <div>
       <Header />
-      {notes.map(createCard)}
+      {notes.map((card) => (
+        <Notes key={card.key} title={card.title} content={card.content} />
+      ))}
       <Footer />
     </div>
   );
