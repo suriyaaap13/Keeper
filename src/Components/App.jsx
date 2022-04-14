@@ -11,12 +11,29 @@ function App() {
       return [...prevValue, value];
     });
   }
+
+  function deleteItem(id) {
+    setContent((prevValue) => {
+      return prevValue.filter((item, index) => {
+        return index !== id;
+      });
+    });
+  }
+
   return (
     <div>
       <Header />
       <CreateArea onAdd={addContent} />
       {content.map((item, index) => {
-        return <Note key={index} title={item.title} content={item.note} />;
+        return (
+          <Note
+            onChecked={deleteItem}
+            key={index}
+            id={index}
+            title={item.title}
+            content={item.note}
+          />
+        );
       })}
       <Footer />
     </div>
